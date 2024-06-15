@@ -1,8 +1,8 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, LinkProps, useNavigate } from "react-router-dom";
 
 interface Props {
   children: string;
-  to: string;
+  to: LinkProps['to'];
 }
 
 export default function LinkButton({ children, to }: Props) {
