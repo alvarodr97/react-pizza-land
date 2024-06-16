@@ -17,7 +17,7 @@ const styles = {
 interface Props {
   children: string;
   disabled?: boolean;
-  to: LinkProps["to"];
+  to?: LinkProps["to"];
   type: stylesType;
   onClick?: MouseEventHandler<HTMLButtonElement>;
 }
