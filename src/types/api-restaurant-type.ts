@@ -1,4 +1,4 @@
-export interface PizzaType {
+export interface PizzaApiI {
   id: number;
   name: string;
   unitPrice: number;

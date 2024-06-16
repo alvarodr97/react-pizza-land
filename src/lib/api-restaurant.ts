@@ -1,8 +1,8 @@
-import { PizzaType } from "../types/api-restaurant-type";
+import { PizzaApiI } from "../types/api-restaurant-type";
 
 const API_URL = "https://react-fast-pizza-api.onrender.com/api";
 
-export async function getMenu(): Promise<PizzaType[]> {
+export async function getMenu(): Promise<PizzaApiI[]> {
   const res = await fetch(`${API_URL}/menu`);
 
   if (!res.ok) throw Error("Failed getting menu");
@@ -54,3 +54,5 @@ export async function updateOrder(id: string, updateObj: object) {
     throw Error("Failed updating your order");
   }
 }
+
+// TODO: tipado
