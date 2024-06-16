@@ -1,4 +1,4 @@
-import { GeocodingType } from "../types/api-geocoding";
+import { GeocodingType } from "../types/api-geocoding-type";
 
 export async function getAddress({
   latitude,
