@@ -1,4 +1,4 @@
-export interface UserState {
+export interface UserI {
   username: string;
   status: "idle" | "loading" | "error";
   position: {

@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { getPosition } from "../../utils/helpers";
 import { getAddress } from "../../lib/api-geocoding";
-import { UserState } from "../../types/user";
+import { UserI } from "../../types/user";
 
 export const fetchAddress = createAsyncThunk(
   "user/fetchAddress",
@@ -21,7 +21,7 @@ export const fetchAddress = createAsyncThunk(
   }
 );
 
-const initialState: UserState = {
+const initialState: UserI = {
   username: "",
   status: "idle",
   position: null,
@@ -55,6 +55,6 @@ const userSlice = createSlice({
 
 export const { updateName } = userSlice.actions;
 
-export const getUsername = (state: { user: UserState }) => state.user.username;
+export const getUsername = (state: { user: UserI }) => state.user.username;
 
 export default userSlice.reducer;
